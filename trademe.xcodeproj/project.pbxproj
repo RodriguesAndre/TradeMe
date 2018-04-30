@@ -1,0 +1,761 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		254BA9F03A2BED1B0F062973 /* libPods-trademeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A5362BB0B1432E6DF744DB7 /* libPods-trademeTests.a */; };
+		65A9513A20970DE9006BA51A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A9513920970DE9006BA51A /* AppDelegate.m */; };
+		65A9513D20970DE9006BA51A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A9513C20970DE9006BA51A /* ViewController.m */; };
+		65A9514020970DE9006BA51A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65A9513E20970DE9006BA51A /* Main.storyboard */; };
+		65A9514220970DE9006BA51A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65A9514120970DE9006BA51A /* Assets.xcassets */; };
+		65A9514520970DE9006BA51A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65A9514320970DE9006BA51A /* LaunchScreen.storyboard */; };
+		65A9514820970DE9006BA51A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A9514720970DE9006BA51A /* main.m */; };
+		65A9515220970DE9006BA51A /* trademeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A9515120970DE9006BA51A /* trademeTests.m */; };
+		65A9515D20970DE9006BA51A /* trademeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A9515C20970DE9006BA51A /* trademeUITests.m */; };
+		A768BCEC3CECBE93EE850CFB /* libPods-trademeUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97AA9EFBEB62241272E32BF1 /* libPods-trademeUITests.a */; };
+		C912EC77B9E2F877BEF382F2 /* libPods-trademe.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3A29452BD259802E2B8E14B /* libPods-trademe.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		65A9514E20970DE9006BA51A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 65A9512D20970DE9006BA51A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 65A9513420970DE9006BA51A;
+			remoteInfo = trademe;
+		};
+		65A9515920970DE9006BA51A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 65A9512D20970DE9006BA51A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 65A9513420970DE9006BA51A;
+			remoteInfo = trademe;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03805663F0A0E500EBAD5952 /* Pods-trademeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trademeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-trademeUITests/Pods-trademeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3299E4FB304E33E72D9264A3 /* Pods-trademe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trademe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-trademe/Pods-trademe.debug.xcconfig"; sourceTree = "<group>"; };
+		65A9513520970DE9006BA51A /* trademe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = trademe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		65A9513820970DE9006BA51A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		65A9513920970DE9006BA51A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		65A9513B20970DE9006BA51A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		65A9513C20970DE9006BA51A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		65A9513F20970DE9006BA51A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		65A9514120970DE9006BA51A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		65A9514420970DE9006BA51A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		65A9514620970DE9006BA51A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65A9514720970DE9006BA51A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		65A9514D20970DE9006BA51A /* trademeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = trademeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		65A9515120970DE9006BA51A /* trademeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = trademeTests.m; sourceTree = "<group>"; };
+		65A9515320970DE9006BA51A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65A9515820970DE9006BA51A /* trademeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = trademeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		65A9515C20970DE9006BA51A /* trademeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = trademeUITests.m; sourceTree = "<group>"; };
+		65A9515E20970DE9006BA51A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72CFEFE6485E835B1D5189DA /* Pods-trademeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trademeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-trademeTests/Pods-trademeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7A5362BB0B1432E6DF744DB7 /* libPods-trademeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-trademeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8078987309955736B0D9EF4C /* Pods-trademe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trademe.release.xcconfig"; path = "Pods/Target Support Files/Pods-trademe/Pods-trademe.release.xcconfig"; sourceTree = "<group>"; };
+		97AA9EFBEB62241272E32BF1 /* libPods-trademeUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-trademeUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB8BC44F16B3EFCD9D2C2390 /* Pods-trademeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trademeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-trademeUITests/Pods-trademeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E3A29452BD259802E2B8E14B /* libPods-trademe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-trademe.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8E3289F97A3AAB4F8205F9C /* Pods-trademeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trademeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-trademeTests/Pods-trademeTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		65A9513220970DE9006BA51A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C912EC77B9E2F877BEF382F2 /* libPods-trademe.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65A9514A20970DE9006BA51A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				254BA9F03A2BED1B0F062973 /* libPods-trademeTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65A9515520970DE9006BA51A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A768BCEC3CECBE93EE850CFB /* libPods-trademeUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		65A9512C20970DE9006BA51A = {
+			isa = PBXGroup;
+			children = (
+				65A9513720970DE9006BA51A /* trademe */,
+				65A9515020970DE9006BA51A /* trademeTests */,
+				65A9515B20970DE9006BA51A /* trademeUITests */,
+				65A9513620970DE9006BA51A /* Products */,
+				9492BAE4E75FE77236EECDB9 /* Pods */,
+				F68BBC0213620D9FD257B209 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		65A9513620970DE9006BA51A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				65A9513520970DE9006BA51A /* trademe.app */,
+				65A9514D20970DE9006BA51A /* trademeTests.xctest */,
+				65A9515820970DE9006BA51A /* trademeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		65A9513720970DE9006BA51A /* trademe */ = {
+			isa = PBXGroup;
+			children = (
+				65A9513820970DE9006BA51A /* AppDelegate.h */,
+				65A9513920970DE9006BA51A /* AppDelegate.m */,
+				65A9513B20970DE9006BA51A /* ViewController.h */,
+				65A9513C20970DE9006BA51A /* ViewController.m */,
+				65A9513E20970DE9006BA51A /* Main.storyboard */,
+				65A9514120970DE9006BA51A /* Assets.xcassets */,
+				65A9514320970DE9006BA51A /* LaunchScreen.storyboard */,
+				65A9514620970DE9006BA51A /* Info.plist */,
+				65A9514720970DE9006BA51A /* main.m */,
+			);
+			path = trademe;
+			sourceTree = "<group>";
+		};
+		65A9515020970DE9006BA51A /* trademeTests */ = {
+			isa = PBXGroup;
+			children = (
+				65A9515120970DE9006BA51A /* trademeTests.m */,
+				65A9515320970DE9006BA51A /* Info.plist */,
+			);
+			path = trademeTests;
+			sourceTree = "<group>";
+		};
+		65A9515B20970DE9006BA51A /* trademeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				65A9515C20970DE9006BA51A /* trademeUITests.m */,
+				65A9515E20970DE9006BA51A /* Info.plist */,
+			);
+			path = trademeUITests;
+			sourceTree = "<group>";
+		};
+		9492BAE4E75FE77236EECDB9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3299E4FB304E33E72D9264A3 /* Pods-trademe.debug.xcconfig */,
+				8078987309955736B0D9EF4C /* Pods-trademe.release.xcconfig */,
+				72CFEFE6485E835B1D5189DA /* Pods-trademeTests.debug.xcconfig */,
+				F8E3289F97A3AAB4F8205F9C /* Pods-trademeTests.release.xcconfig */,
+				AB8BC44F16B3EFCD9D2C2390 /* Pods-trademeUITests.debug.xcconfig */,
+				03805663F0A0E500EBAD5952 /* Pods-trademeUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F68BBC0213620D9FD257B209 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E3A29452BD259802E2B8E14B /* libPods-trademe.a */,
+				7A5362BB0B1432E6DF744DB7 /* libPods-trademeTests.a */,
+				97AA9EFBEB62241272E32BF1 /* libPods-trademeUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		65A9513420970DE9006BA51A /* trademe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65A9516120970DE9006BA51A /* Build configuration list for PBXNativeTarget "trademe" */;
+			buildPhases = (
+				FCA2698FDC937B5F2E286FF2 /* [CP] Check Pods Manifest.lock */,
+				65A9513120970DE9006BA51A /* Sources */,
+				65A9513220970DE9006BA51A /* Frameworks */,
+				65A9513320970DE9006BA51A /* Resources */,
+				EE53D61ED7F06EEE2723119A /* [CP] Embed Pods Frameworks */,
+				C124939448B6C4580EAA51FF /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = trademe;
+			productName = trademe;
+			productReference = 65A9513520970DE9006BA51A /* trademe.app */;
+			productType = "com.apple.product-type.application";
+		};
+		65A9514C20970DE9006BA51A /* trademeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65A9516420970DE9006BA51A /* Build configuration list for PBXNativeTarget "trademeTests" */;
+			buildPhases = (
+				8BE63E2189E1C611FF4F7654 /* [CP] Check Pods Manifest.lock */,
+				65A9514920970DE9006BA51A /* Sources */,
+				65A9514A20970DE9006BA51A /* Frameworks */,
+				65A9514B20970DE9006BA51A /* Resources */,
+				212731B60F9B9AB7D43E4134 /* [CP] Embed Pods Frameworks */,
+				3E5DF70A486AFBB3C066C335 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				65A9514F20970DE9006BA51A /* PBXTargetDependency */,
+			);
+			name = trademeTests;
+			productName = trademeTests;
+			productReference = 65A9514D20970DE9006BA51A /* trademeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		65A9515720970DE9006BA51A /* trademeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65A9516720970DE9006BA51A /* Build configuration list for PBXNativeTarget "trademeUITests" */;
+			buildPhases = (
+				04A917A87F82BC3B20A106B3 /* [CP] Check Pods Manifest.lock */,
+				65A9515420970DE9006BA51A /* Sources */,
+				65A9515520970DE9006BA51A /* Frameworks */,
+				65A9515620970DE9006BA51A /* Resources */,
+				A6744C0750C75A28B013A8E1 /* [CP] Embed Pods Frameworks */,
+				3B39C23CBF689D1BCBBD9636 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				65A9515A20970DE9006BA51A /* PBXTargetDependency */,
+			);
+			name = trademeUITests;
+			productName = trademeUITests;
+			productReference = 65A9515820970DE9006BA51A /* trademeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		65A9512D20970DE9006BA51A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = Verglas;
+				TargetAttributes = {
+					65A9513420970DE9006BA51A = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					65A9514C20970DE9006BA51A = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 65A9513420970DE9006BA51A;
+					};
+					65A9515720970DE9006BA51A = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 65A9513420970DE9006BA51A;
+					};
+				};
+			};
+			buildConfigurationList = 65A9513020970DE9006BA51A /* Build configuration list for PBXProject "trademe" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 65A9512C20970DE9006BA51A;
+			productRefGroup = 65A9513620970DE9006BA51A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				65A9513420970DE9006BA51A /* trademe */,
+				65A9514C20970DE9006BA51A /* trademeTests */,
+				65A9515720970DE9006BA51A /* trademeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		65A9513320970DE9006BA51A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65A9514520970DE9006BA51A /* LaunchScreen.storyboard in Resources */,
+				65A9514220970DE9006BA51A /* Assets.xcassets in Resources */,
+				65A9514020970DE9006BA51A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65A9514B20970DE9006BA51A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65A9515620970DE9006BA51A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		04A917A87F82BC3B20A106B3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-trademeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		212731B60F9B9AB7D43E4134 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-trademeTests/Pods-trademeTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3B39C23CBF689D1BCBBD9636 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-trademeUITests/Pods-trademeUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3E5DF70A486AFBB3C066C335 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-trademeTests/Pods-trademeTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8BE63E2189E1C611FF4F7654 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-trademeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A6744C0750C75A28B013A8E1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-trademeUITests/Pods-trademeUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C124939448B6C4580EAA51FF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-trademe/Pods-trademe-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE53D61ED7F06EEE2723119A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-trademe/Pods-trademe-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FCA2698FDC937B5F2E286FF2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-trademe-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		65A9513120970DE9006BA51A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65A9513D20970DE9006BA51A /* ViewController.m in Sources */,
+				65A9514820970DE9006BA51A /* main.m in Sources */,
+				65A9513A20970DE9006BA51A /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65A9514920970DE9006BA51A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65A9515220970DE9006BA51A /* trademeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65A9515420970DE9006BA51A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65A9515D20970DE9006BA51A /* trademeUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		65A9514F20970DE9006BA51A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 65A9513420970DE9006BA51A /* trademe */;
+			targetProxy = 65A9514E20970DE9006BA51A /* PBXContainerItemProxy */;
+		};
+		65A9515A20970DE9006BA51A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 65A9513420970DE9006BA51A /* trademe */;
+			targetProxy = 65A9515920970DE9006BA51A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		65A9513E20970DE9006BA51A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				65A9513F20970DE9006BA51A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		65A9514320970DE9006BA51A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				65A9514420970DE9006BA51A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		65A9515F20970DE9006BA51A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		65A9516020970DE9006BA51A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		65A9516220970DE9006BA51A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3299E4FB304E33E72D9264A3 /* Pods-trademe.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 533975FML6;
+				INFOPLIST_FILE = trademe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fr.aramisauto.trademe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		65A9516320970DE9006BA51A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8078987309955736B0D9EF4C /* Pods-trademe.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 533975FML6;
+				INFOPLIST_FILE = trademe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fr.aramisauto.trademe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		65A9516520970DE9006BA51A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72CFEFE6485E835B1D5189DA /* Pods-trademeTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 533975FML6;
+				INFOPLIST_FILE = trademeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fr.aramisauto.trademeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/trademe.app/trademe";
+			};
+			name = Debug;
+		};
+		65A9516620970DE9006BA51A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8E3289F97A3AAB4F8205F9C /* Pods-trademeTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 533975FML6;
+				INFOPLIST_FILE = trademeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fr.aramisauto.trademeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/trademe.app/trademe";
+			};
+			name = Release;
+		};
+		65A9516820970DE9006BA51A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB8BC44F16B3EFCD9D2C2390 /* Pods-trademeUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 533975FML6;
+				INFOPLIST_FILE = trademeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fr.aramisauto.trademeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = trademe;
+			};
+			name = Debug;
+		};
+		65A9516920970DE9006BA51A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03805663F0A0E500EBAD5952 /* Pods-trademeUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 533975FML6;
+				INFOPLIST_FILE = trademeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fr.aramisauto.trademeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = trademe;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		65A9513020970DE9006BA51A /* Build configuration list for PBXProject "trademe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65A9515F20970DE9006BA51A /* Debug */,
+				65A9516020970DE9006BA51A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65A9516120970DE9006BA51A /* Build configuration list for PBXNativeTarget "trademe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65A9516220970DE9006BA51A /* Debug */,
+				65A9516320970DE9006BA51A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65A9516420970DE9006BA51A /* Build configuration list for PBXNativeTarget "trademeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65A9516520970DE9006BA51A /* Debug */,
+				65A9516620970DE9006BA51A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65A9516720970DE9006BA51A /* Build configuration list for PBXNativeTarget "trademeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65A9516820970DE9006BA51A /* Debug */,
+				65A9516920970DE9006BA51A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 65A9512D20970DE9006BA51A /* Project object */;
+}
