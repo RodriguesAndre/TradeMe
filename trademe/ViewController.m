@@ -8,7 +8,14 @@
 
 #import "ViewController.h"
 
+#import "NetworkManager.h"
+#import "RequestBlock.h"
+#import "CategoryOperation.h"
+
 @interface ViewController ()
+
+@property (weak, nonatomic) IBOutlet UIButton *simpleButton;
+
 
 @end
 
@@ -25,5 +32,25 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+- (IBAction)clickButton:(id)sender {
+    
+    CategoryOperation *operation = [CategoryOperation new];
+    RequestBlock *block = [RequestBlock initWithStartBlock:^{
+        NSLog(@"start");
+    } andSuccessBlock:^(NSURLSessionDataTask * _Nullable dataTask, id _Nullable result) {
+        NSLog(@"andSuccessBlock");
+        NSLog(@"result: %@", result);
+    } errorBlock:^(NSURLSessionDataTask * _Nullable dataTask, NSError * _Nonnull error) {
+        NSLog(@"errorBlock");
+        NSLog(@"eroor: %@", error);
+    } networkErrorBlock:^{
+        NSLog(@"networkErrorBlock");
+    } finishBlock:^{
+        NSLog(@"finishBlock");
+    }];
+    
+    [[NetworkManager sharedInstance] requestOperation:operation withBlock:block];
+}
 
 @end

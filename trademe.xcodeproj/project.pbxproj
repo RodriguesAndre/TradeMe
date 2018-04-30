@@ -16,6 +16,10 @@
 		65A9514820970DE9006BA51A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A9514720970DE9006BA51A /* main.m */; };
 		65A9515220970DE9006BA51A /* trademeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A9515120970DE9006BA51A /* trademeTests.m */; };
 		65A9515D20970DE9006BA51A /* trademeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A9515C20970DE9006BA51A /* trademeUITests.m */; };
+		65A9516C20974A2C006BA51A /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A9516B20974A2C006BA51A /* NetworkManager.m */; };
+		65A9516F209750A5006BA51A /* BaseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A9516E209750A5006BA51A /* BaseOperation.m */; };
+		65A951722097513D006BA51A /* CategoryOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A951712097513D006BA51A /* CategoryOperation.m */; };
+		65A9517520975E73006BA51A /* RequestBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A9517420975E73006BA51A /* RequestBlock.m */; };
 		A768BCEC3CECBE93EE850CFB /* libPods-trademeUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97AA9EFBEB62241272E32BF1 /* libPods-trademeUITests.a */; };
 		C912EC77B9E2F877BEF382F2 /* libPods-trademe.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3A29452BD259802E2B8E14B /* libPods-trademe.a */; };
 /* End PBXBuildFile section */
@@ -56,6 +60,15 @@
 		65A9515820970DE9006BA51A /* trademeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = trademeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		65A9515C20970DE9006BA51A /* trademeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = trademeUITests.m; sourceTree = "<group>"; };
 		65A9515E20970DE9006BA51A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65A9516A20974A2C006BA51A /* NetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
+		65A9516B20974A2C006BA51A /* NetworkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
+		65A9516D209750A5006BA51A /* BaseOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseOperation.h; sourceTree = "<group>"; };
+		65A9516E209750A5006BA51A /* BaseOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseOperation.m; sourceTree = "<group>"; };
+		65A951702097513D006BA51A /* CategoryOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CategoryOperation.h; sourceTree = "<group>"; };
+		65A951712097513D006BA51A /* CategoryOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CategoryOperation.m; sourceTree = "<group>"; };
+		65A9517320975E73006BA51A /* RequestBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequestBlock.h; sourceTree = "<group>"; };
+		65A9517420975E73006BA51A /* RequestBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RequestBlock.m; sourceTree = "<group>"; };
+		65A951762097669B006BA51A /* RequestProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequestProtocol.h; sourceTree = "<group>"; };
 		72CFEFE6485E835B1D5189DA /* Pods-trademeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trademeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-trademeTests/Pods-trademeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7A5362BB0B1432E6DF744DB7 /* libPods-trademeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-trademeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8078987309955736B0D9EF4C /* Pods-trademe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trademe.release.xcconfig"; path = "Pods/Target Support Files/Pods-trademe/Pods-trademe.release.xcconfig"; sourceTree = "<group>"; };
@@ -127,6 +140,15 @@
 				65A9514320970DE9006BA51A /* LaunchScreen.storyboard */,
 				65A9514620970DE9006BA51A /* Info.plist */,
 				65A9514720970DE9006BA51A /* main.m */,
+				65A951762097669B006BA51A /* RequestProtocol.h */,
+				65A9517320975E73006BA51A /* RequestBlock.h */,
+				65A9517420975E73006BA51A /* RequestBlock.m */,
+				65A9516A20974A2C006BA51A /* NetworkManager.h */,
+				65A9516B20974A2C006BA51A /* NetworkManager.m */,
+				65A9516D209750A5006BA51A /* BaseOperation.h */,
+				65A9516E209750A5006BA51A /* BaseOperation.m */,
+				65A951702097513D006BA51A /* CategoryOperation.h */,
+				65A951712097513D006BA51A /* CategoryOperation.m */,
 			);
 			path = trademe;
 			sourceTree = "<group>";
@@ -248,7 +270,7 @@
 				TargetAttributes = {
 					65A9513420970DE9006BA51A = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					65A9514C20970DE9006BA51A = {
 						CreatedOnToolsVersion = 9.2;
@@ -461,9 +483,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65A9516C20974A2C006BA51A /* NetworkManager.m in Sources */,
 				65A9513D20970DE9006BA51A /* ViewController.m in Sources */,
+				65A9516F209750A5006BA51A /* BaseOperation.m in Sources */,
 				65A9514820970DE9006BA51A /* main.m in Sources */,
 				65A9513A20970DE9006BA51A /* AppDelegate.m in Sources */,
+				65A951722097513D006BA51A /* CategoryOperation.m in Sources */,
+				65A9517520975E73006BA51A /* RequestBlock.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -627,13 +653,15 @@
 			baseConfigurationReference = 3299E4FB304E33E72D9264A3 /* Pods-trademe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 533975FML6;
 				INFOPLIST_FILE = trademe/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fr.aramisauto.trademe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "93865a5a-0e1c-4b0a-ba85-a026dcc5ede5";
+				PROVISIONING_PROFILE_SPECIFIER = "Generic Development";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -643,13 +671,14 @@
 			baseConfigurationReference = 8078987309955736B0D9EF4C /* Pods-trademe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 533975FML6;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = trademe/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fr.aramisauto.trademe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

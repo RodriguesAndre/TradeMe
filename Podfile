@@ -6,6 +6,7 @@ target 'trademe' do
   # use_frameworks!
 
   # Pods for trademe
+  pod 'AFNetworking', '~> 3.0'
 
   target 'trademeTests' do
     inherit! :search_paths
