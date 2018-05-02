@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		254BA9F03A2BED1B0F062973 /* libPods-trademeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A5362BB0B1432E6DF744DB7 /* libPods-trademeTests.a */; };
 		65A9513A20970DE9006BA51A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A9513920970DE9006BA51A /* AppDelegate.m */; };
-		65A9513D20970DE9006BA51A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A9513C20970DE9006BA51A /* ViewController.m */; };
-		65A9514020970DE9006BA51A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65A9513E20970DE9006BA51A /* Main.storyboard */; };
+		65A9513D20970DE9006BA51A /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A9513C20970DE9006BA51A /* CategoryViewController.m */; };
+		65A9514020970DE9006BA51A /* CategoryView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65A9513E20970DE9006BA51A /* CategoryView.storyboard */; };
 		65A9514220970DE9006BA51A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65A9514120970DE9006BA51A /* Assets.xcassets */; };
 		65A9514520970DE9006BA51A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65A9514320970DE9006BA51A /* LaunchScreen.storyboard */; };
 		65A9514820970DE9006BA51A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A9514720970DE9006BA51A /* main.m */; };
@@ -20,6 +20,8 @@
 		65A9516F209750A5006BA51A /* BaseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A9516E209750A5006BA51A /* BaseOperation.m */; };
 		65A951722097513D006BA51A /* CategoryOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A951712097513D006BA51A /* CategoryOperation.m */; };
 		65A9517520975E73006BA51A /* RequestBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A9517420975E73006BA51A /* RequestBlock.m */; };
+		65A9517C20999915006BA51A /* CategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A9517B20999915006BA51A /* CategoryModel.m */; };
+		65A9517F2099D525006BA51A /* Provider.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A9517E2099D525006BA51A /* Provider.m */; };
 		A768BCEC3CECBE93EE850CFB /* libPods-trademeUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97AA9EFBEB62241272E32BF1 /* libPods-trademeUITests.a */; };
 		C912EC77B9E2F877BEF382F2 /* libPods-trademe.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3A29452BD259802E2B8E14B /* libPods-trademe.a */; };
 /* End PBXBuildFile section */
@@ -47,9 +49,9 @@
 		65A9513520970DE9006BA51A /* trademe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = trademe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65A9513820970DE9006BA51A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		65A9513920970DE9006BA51A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		65A9513B20970DE9006BA51A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		65A9513C20970DE9006BA51A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		65A9513F20970DE9006BA51A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		65A9513B20970DE9006BA51A /* CategoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
+		65A9513C20970DE9006BA51A /* CategoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CategoryViewController.m; sourceTree = "<group>"; };
+		65A9513F20970DE9006BA51A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/CategoryView.storyboard; sourceTree = "<group>"; };
 		65A9514120970DE9006BA51A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65A9514420970DE9006BA51A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65A9514620970DE9006BA51A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -69,6 +71,10 @@
 		65A9517320975E73006BA51A /* RequestBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequestBlock.h; sourceTree = "<group>"; };
 		65A9517420975E73006BA51A /* RequestBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RequestBlock.m; sourceTree = "<group>"; };
 		65A951762097669B006BA51A /* RequestProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequestProtocol.h; sourceTree = "<group>"; };
+		65A9517A20999915006BA51A /* CategoryModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CategoryModel.h; sourceTree = "<group>"; };
+		65A9517B20999915006BA51A /* CategoryModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CategoryModel.m; sourceTree = "<group>"; };
+		65A9517D2099D525006BA51A /* Provider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Provider.h; sourceTree = "<group>"; };
+		65A9517E2099D525006BA51A /* Provider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Provider.m; sourceTree = "<group>"; };
 		72CFEFE6485E835B1D5189DA /* Pods-trademeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trademeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-trademeTests/Pods-trademeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7A5362BB0B1432E6DF744DB7 /* libPods-trademeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-trademeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8078987309955736B0D9EF4C /* Pods-trademe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trademe.release.xcconfig"; path = "Pods/Target Support Files/Pods-trademe/Pods-trademe.release.xcconfig"; sourceTree = "<group>"; };
@@ -133,22 +139,16 @@
 			children = (
 				65A9513820970DE9006BA51A /* AppDelegate.h */,
 				65A9513920970DE9006BA51A /* AppDelegate.m */,
-				65A9513B20970DE9006BA51A /* ViewController.h */,
-				65A9513C20970DE9006BA51A /* ViewController.m */,
-				65A9513E20970DE9006BA51A /* Main.storyboard */,
+				65A9513B20970DE9006BA51A /* CategoryViewController.h */,
+				65A9513C20970DE9006BA51A /* CategoryViewController.m */,
+				65A9513E20970DE9006BA51A /* CategoryView.storyboard */,
 				65A9514120970DE9006BA51A /* Assets.xcassets */,
 				65A9514320970DE9006BA51A /* LaunchScreen.storyboard */,
 				65A9514620970DE9006BA51A /* Info.plist */,
 				65A9514720970DE9006BA51A /* main.m */,
-				65A951762097669B006BA51A /* RequestProtocol.h */,
-				65A9517320975E73006BA51A /* RequestBlock.h */,
-				65A9517420975E73006BA51A /* RequestBlock.m */,
-				65A9516A20974A2C006BA51A /* NetworkManager.h */,
-				65A9516B20974A2C006BA51A /* NetworkManager.m */,
-				65A9516D209750A5006BA51A /* BaseOperation.h */,
-				65A9516E209750A5006BA51A /* BaseOperation.m */,
-				65A951702097513D006BA51A /* CategoryOperation.h */,
-				65A951712097513D006BA51A /* CategoryOperation.m */,
+				65A9517A20999915006BA51A /* CategoryModel.h */,
+				65A9517B20999915006BA51A /* CategoryModel.m */,
+				65A95179209998F9006BA51A /* Network */,
 			);
 			path = trademe;
 			sourceTree = "<group>";
@@ -169,6 +169,24 @@
 				65A9515E20970DE9006BA51A /* Info.plist */,
 			);
 			path = trademeUITests;
+			sourceTree = "<group>";
+		};
+		65A95179209998F9006BA51A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				65A951762097669B006BA51A /* RequestProtocol.h */,
+				65A9517320975E73006BA51A /* RequestBlock.h */,
+				65A9517420975E73006BA51A /* RequestBlock.m */,
+				65A9516A20974A2C006BA51A /* NetworkManager.h */,
+				65A9516B20974A2C006BA51A /* NetworkManager.m */,
+				65A9516D209750A5006BA51A /* BaseOperation.h */,
+				65A9516E209750A5006BA51A /* BaseOperation.m */,
+				65A951702097513D006BA51A /* CategoryOperation.h */,
+				65A951712097513D006BA51A /* CategoryOperation.m */,
+				65A9517D2099D525006BA51A /* Provider.h */,
+				65A9517E2099D525006BA51A /* Provider.m */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		9492BAE4E75FE77236EECDB9 /* Pods */ = {
@@ -311,7 +329,7 @@
 			files = (
 				65A9514520970DE9006BA51A /* LaunchScreen.storyboard in Resources */,
 				65A9514220970DE9006BA51A /* Assets.xcassets in Resources */,
-				65A9514020970DE9006BA51A /* Main.storyboard in Resources */,
+				65A9514020970DE9006BA51A /* CategoryView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,7 +502,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				65A9516C20974A2C006BA51A /* NetworkManager.m in Sources */,
-				65A9513D20970DE9006BA51A /* ViewController.m in Sources */,
+				65A9517C20999915006BA51A /* CategoryModel.m in Sources */,
+				65A9513D20970DE9006BA51A /* CategoryViewController.m in Sources */,
+				65A9517F2099D525006BA51A /* Provider.m in Sources */,
 				65A9516F209750A5006BA51A /* BaseOperation.m in Sources */,
 				65A9514820970DE9006BA51A /* main.m in Sources */,
 				65A9513A20970DE9006BA51A /* AppDelegate.m in Sources */,
@@ -525,12 +545,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		65A9513E20970DE9006BA51A /* Main.storyboard */ = {
+		65A9513E20970DE9006BA51A /* CategoryView.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				65A9513F20970DE9006BA51A /* Base */,
 			);
-			name = Main.storyboard;
+			name = CategoryView.storyboard;
 			sourceTree = "<group>";
 		};
 		65A9514320970DE9006BA51A /* LaunchScreen.storyboard */ = {

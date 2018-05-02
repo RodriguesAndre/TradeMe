@@ -7,6 +7,7 @@ target 'trademe' do
 
   # Pods for trademe
   pod 'AFNetworking', '~> 3.0'
+  pod 'JSONModel'
 
   target 'trademeTests' do
     inherit! :search_paths

@@ -17,7 +17,7 @@ typedef void (^Finish)(void);
 @protocol RequestProtocol<NSObject>
 
 - (void)onSuccess:(id _Nullable)object;
-- (void)onFailure:(NSError* _Nonnull)error;
+- (void)onError:(NSError* _Nonnull)error;
 
 @optional
 - (void)onStart;

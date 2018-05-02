@@ -36,7 +36,7 @@
     self.successBlock(nil, object);
 }
 
-- (void)onFailure:(NSError *)error {
+- (void)onError:(NSError *)error {
     self.errorBlock(nil, error);
 }
 

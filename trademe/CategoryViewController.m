@@ -6,20 +6,22 @@
 //  Copyright © 2018 Verglas. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "CategoryViewController.h"
 
 #import "NetworkManager.h"
 #import "RequestBlock.h"
 #import "CategoryOperation.h"
 
-@interface ViewController ()
+#import "Provider.h"
+
+@interface CategoryViewController ()
 
 @property (weak, nonatomic) IBOutlet UIButton *simpleButton;
 
 
 @end
 
-@implementation ViewController
+@implementation CategoryViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -35,7 +37,7 @@
 
 - (IBAction)clickButton:(id)sender {
     
-    CategoryOperation *operation = [CategoryOperation new];
+    CategoryOperation *operation = [[CategoryOperation alloc] init];
     RequestBlock *block = [RequestBlock initWithStartBlock:^{
         NSLog(@"start");
     } andSuccessBlock:^(NSURLSessionDataTask * _Nullable dataTask, id _Nullable result) {
@@ -50,7 +52,9 @@
         NSLog(@"finishBlock");
     }];
     
-    [[NetworkManager sharedInstance] requestOperation:operation withBlock:block];
+    
+    [Provider requestOperation:operation withBlock:block];
+    //[[NetworkManager sharedInstance] requestOperation:operation withBlock:block];
 }
 
 @end
