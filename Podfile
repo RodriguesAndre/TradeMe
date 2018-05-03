@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+platform :ios, '9.0'
 
 target 'trademe' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
@@ -8,6 +8,7 @@ target 'trademe' do
   # Pods for trademe
   pod 'AFNetworking', '~> 3.0'
   pod 'JSONModel'
+  pod 'SVProgressHUD'
 
   target 'trademeTests' do
     inherit! :search_paths

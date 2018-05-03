@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class CategoryModel;
+
 @interface CategoryViewController : UIViewController
 
+- (instancetype)initWithCategories:(NSArray <CategoryModel *> *)categories;
 
 @end
 

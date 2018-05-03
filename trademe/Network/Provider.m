@@ -23,7 +23,6 @@
         [requestBlock onStart];
     } andSuccessBlock:^(NSURLSessionDataTask * _Nullable dataTask, id _Nullable result) {
         
-        
         NSError *error;
         CategoryModel *object = [[NSClassFromString([operation modelClassName]) alloc] initWithDictionary:result error:&error];
         
@@ -33,13 +32,14 @@
             [requestBlock onSuccess:object];
         }
 
+        [requestBlock onFinish];
     } errorBlock:^(NSURLSessionDataTask * _Nullable dataTask, NSError * _Nonnull error) {
         [requestBlock onError:error];
+        [requestBlock onFinish];
     } networkErrorBlock:^{
         [requestBlock onNetworkError];
-    } finishBlock:^{
         [requestBlock onFinish];
-    }];
+    } finishBlock:nil];
     
     return [[NetworkManager sharedInstance] requestOperation:operation withBlock:providerBlock];
 }

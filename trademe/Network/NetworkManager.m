@@ -22,6 +22,8 @@
 
 static NSString *kBaseURL = @"https://api.tmsandbox.co.nz/v1";
 
+static NSString *kAuthorizationKey = @"Authorization";
+static NSString *kAuthorizationValue = @"OAuth oauth_consumer_key=\"A1AC63F0332A131A78FAC304D007E7D1\",oauth_signature_method=\"HMAC-SHA1\",oauth_timestamp=\"1525266047\",oauth_nonce=\"FJQsJbldW57\",oauth_version=\"1.0\",oauth_signature=\"sdhmu%2FuyTLjuqHX1m%2BfJxZxXwqo%3D\"";
 
 
 + (instancetype)sharedInstance {
@@ -41,6 +43,7 @@ static NSString *kBaseURL = @"https://api.tmsandbox.co.nz/v1";
         _sessionManager.requestSerializer = [AFJSONRequestSerializer serializer];
         [_sessionManager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
         [_sessionManager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+        //[_sessionManager.requestSerializer setValue:kAuthorizationValue forHTTPHeaderField:kAuthorizationKey];
         
     }
     return self;
@@ -55,6 +58,7 @@ static NSString *kBaseURL = @"https://api.tmsandbox.co.nz/v1";
     
     NSURLSessionDataTask *dataTask;
     NSString *url = [self urlFromOperation:operation];
+    requestBlock.startBlock();
     
     switch ([operation httpVerb]) {
         case GET:
