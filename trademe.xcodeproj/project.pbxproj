@@ -22,6 +22,13 @@
 		65A9517520975E73006BA51A /* RequestBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A9517420975E73006BA51A /* RequestBlock.m */; };
 		65A9517C20999915006BA51A /* CategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A9517B20999915006BA51A /* CategoryModel.m */; };
 		65A9517F2099D525006BA51A /* Provider.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A9517E2099D525006BA51A /* Provider.m */; };
+		65A9518A209B6386006BA51A /* ResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A95189209B6386006BA51A /* ResultModel.m */; };
+		65A9518D209B66E5006BA51A /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A9518C209B66E5006BA51A /* SearchViewController.m */; };
+		65A9518F209B66FC006BA51A /* SearchView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65A9518E209B66FC006BA51A /* SearchView.storyboard */; };
+		65A95192209C591D006BA51A /* SearchOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A95191209C591D006BA51A /* SearchOperation.m */; };
+		65A95196209CAD7E006BA51A /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A95194209CAD7E006BA51A /* DetailViewController.m */; };
+		65A95197209CAD7E006BA51A /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65A95195209CAD7E006BA51A /* DetailViewController.xib */; };
+		65A9519A209CAE00006BA51A /* DetailItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A95199209CAE00006BA51A /* DetailItemModel.m */; };
 		A768BCEC3CECBE93EE850CFB /* libPods-trademeUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97AA9EFBEB62241272E32BF1 /* libPods-trademeUITests.a */; };
 		C912EC77B9E2F877BEF382F2 /* libPods-trademe.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3A29452BD259802E2B8E14B /* libPods-trademe.a */; };
 /* End PBXBuildFile section */
@@ -75,6 +82,18 @@
 		65A9517B20999915006BA51A /* CategoryModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CategoryModel.m; sourceTree = "<group>"; };
 		65A9517D2099D525006BA51A /* Provider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Provider.h; sourceTree = "<group>"; };
 		65A9517E2099D525006BA51A /* Provider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Provider.m; sourceTree = "<group>"; };
+		65A95188209B6386006BA51A /* ResultModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResultModel.h; sourceTree = "<group>"; };
+		65A95189209B6386006BA51A /* ResultModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResultModel.m; sourceTree = "<group>"; };
+		65A9518B209B66E5006BA51A /* SearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		65A9518C209B66E5006BA51A /* SearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		65A9518E209B66FC006BA51A /* SearchView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchView.storyboard; sourceTree = "<group>"; };
+		65A95190209C591D006BA51A /* SearchOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchOperation.h; sourceTree = "<group>"; };
+		65A95191209C591D006BA51A /* SearchOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchOperation.m; sourceTree = "<group>"; };
+		65A95193209CAD7E006BA51A /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		65A95194209CAD7E006BA51A /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		65A95195209CAD7E006BA51A /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		65A95198209CAE00006BA51A /* DetailItemModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailItemModel.h; sourceTree = "<group>"; };
+		65A95199209CAE00006BA51A /* DetailItemModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailItemModel.m; sourceTree = "<group>"; };
 		72CFEFE6485E835B1D5189DA /* Pods-trademeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trademeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-trademeTests/Pods-trademeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7A5362BB0B1432E6DF744DB7 /* libPods-trademeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-trademeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8078987309955736B0D9EF4C /* Pods-trademe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trademe.release.xcconfig"; path = "Pods/Target Support Files/Pods-trademe/Pods-trademe.release.xcconfig"; sourceTree = "<group>"; };
@@ -139,15 +158,14 @@
 			children = (
 				65A9513820970DE9006BA51A /* AppDelegate.h */,
 				65A9513920970DE9006BA51A /* AppDelegate.m */,
-				65A9513B20970DE9006BA51A /* CategoryViewController.h */,
-				65A9513C20970DE9006BA51A /* CategoryViewController.m */,
-				65A9513E20970DE9006BA51A /* CategoryView.storyboard */,
+				65A9519C209CAE14006BA51A /* CategoryViewController */,
+				65A9519D209CAE22006BA51A /* SearchViewController */,
+				65A9519E209CAE58006BA51A /* DetailViewController */,
 				65A9514120970DE9006BA51A /* Assets.xcassets */,
 				65A9514320970DE9006BA51A /* LaunchScreen.storyboard */,
 				65A9514620970DE9006BA51A /* Info.plist */,
 				65A9514720970DE9006BA51A /* main.m */,
-				65A9517A20999915006BA51A /* CategoryModel.h */,
-				65A9517B20999915006BA51A /* CategoryModel.m */,
+				65A9519B209CAE06006BA51A /* Model */,
 				65A95179209998F9006BA51A /* Network */,
 			);
 			path = trademe;
@@ -183,10 +201,55 @@
 				65A9516E209750A5006BA51A /* BaseOperation.m */,
 				65A951702097513D006BA51A /* CategoryOperation.h */,
 				65A951712097513D006BA51A /* CategoryOperation.m */,
+				65A95190209C591D006BA51A /* SearchOperation.h */,
+				65A95191209C591D006BA51A /* SearchOperation.m */,
 				65A9517D2099D525006BA51A /* Provider.h */,
 				65A9517E2099D525006BA51A /* Provider.m */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		65A9519B209CAE06006BA51A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				65A9517A20999915006BA51A /* CategoryModel.h */,
+				65A9517B20999915006BA51A /* CategoryModel.m */,
+				65A95188209B6386006BA51A /* ResultModel.h */,
+				65A95189209B6386006BA51A /* ResultModel.m */,
+				65A95198209CAE00006BA51A /* DetailItemModel.h */,
+				65A95199209CAE00006BA51A /* DetailItemModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		65A9519C209CAE14006BA51A /* CategoryViewController */ = {
+			isa = PBXGroup;
+			children = (
+				65A9513B20970DE9006BA51A /* CategoryViewController.h */,
+				65A9513C20970DE9006BA51A /* CategoryViewController.m */,
+				65A9513E20970DE9006BA51A /* CategoryView.storyboard */,
+			);
+			path = CategoryViewController;
+			sourceTree = "<group>";
+		};
+		65A9519D209CAE22006BA51A /* SearchViewController */ = {
+			isa = PBXGroup;
+			children = (
+				65A9518B209B66E5006BA51A /* SearchViewController.h */,
+				65A9518C209B66E5006BA51A /* SearchViewController.m */,
+				65A9518E209B66FC006BA51A /* SearchView.storyboard */,
+			);
+			path = SearchViewController;
+			sourceTree = "<group>";
+		};
+		65A9519E209CAE58006BA51A /* DetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				65A95193209CAD7E006BA51A /* DetailViewController.h */,
+				65A95194209CAD7E006BA51A /* DetailViewController.m */,
+				65A95195209CAD7E006BA51A /* DetailViewController.xib */,
+			);
+			path = DetailViewController;
 			sourceTree = "<group>";
 		};
 		9492BAE4E75FE77236EECDB9 /* Pods */ = {
@@ -328,6 +391,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				65A9514520970DE9006BA51A /* LaunchScreen.storyboard in Resources */,
+				65A9518F209B66FC006BA51A /* SearchView.storyboard in Resources */,
+				65A95197209CAD7E006BA51A /* DetailViewController.xib in Resources */,
 				65A9514220970DE9006BA51A /* Assets.xcassets in Resources */,
 				65A9514020970DE9006BA51A /* CategoryView.storyboard in Resources */,
 			);
@@ -505,12 +570,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				65A9516C20974A2C006BA51A /* NetworkManager.m in Sources */,
+				65A9519A209CAE00006BA51A /* DetailItemModel.m in Sources */,
 				65A9517C20999915006BA51A /* CategoryModel.m in Sources */,
 				65A9513D20970DE9006BA51A /* CategoryViewController.m in Sources */,
 				65A9517F2099D525006BA51A /* Provider.m in Sources */,
 				65A9516F209750A5006BA51A /* BaseOperation.m in Sources */,
 				65A9514820970DE9006BA51A /* main.m in Sources */,
+				65A9518A209B6386006BA51A /* ResultModel.m in Sources */,
+				65A95192209C591D006BA51A /* SearchOperation.m in Sources */,
 				65A9513A20970DE9006BA51A /* AppDelegate.m in Sources */,
+				65A95196209CAD7E006BA51A /* DetailViewController.m in Sources */,
+				65A9518D209B66E5006BA51A /* SearchViewController.m in Sources */,
 				65A951722097513D006BA51A /* CategoryOperation.m in Sources */,
 				65A9517520975E73006BA51A /* RequestBlock.m in Sources */,
 			);

@@ -12,6 +12,7 @@
 #import "RequestBlock.h"
 #import "CategoryModel.h"
 #import "CategoryOperation.h"
+#import "SearchViewController.h"
 
 #import "Provider.h"
 #import "SVProgressHUD.h"
@@ -19,8 +20,6 @@
 
 
 @interface CategoryViewController () <UITableViewDataSource, UITableViewDelegate>
-
-@property (weak, nonatomic) IBOutlet UIButton *simpleButton;
 
 @property (weak, nonatomic) IBOutlet UITextField *searchField;
 @property (weak, nonatomic) IBOutlet UIButton *searchButton;
@@ -47,13 +46,12 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     if (_categories == nil) {
-        self.title = @"Trade me"// localizeStrings
+        self.title = @"Trade me";// localizeStrings
         _categories = @[];
         [self getRootCategory];
     } else {
         [_resultListView reloadData];
     }
-    
 }
 
 
@@ -82,12 +80,19 @@
         [SVProgressHUD dismiss];
     }];
     
-    
     [Provider requestOperation:operation withBlock:block];
 }
 
-- (IBAction)clickButton:(id)sender {
+- (IBAction)clickSearchButton:(id)sender {
+    if ([_searchField.text length] > 0) {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"SearchView" bundle:nil];
+        SearchViewController *searchVC = [storyboard instantiateInitialViewController];
 
+        searchVC.title = _searchField.text;
+        searchVC.searchValue = _searchField.text;
+        
+        [self.navigationController pushViewController:searchVC animated:YES];
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -111,10 +116,8 @@
 
     if ([[_categories objectAtIndex:indexPath.row] Subcategories] != nil && [[[_categories objectAtIndex:indexPath.row] Subcategories] count] > 0) {
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-        cell.userInteractionEnabled = true;
     } else {
         cell.accessoryType = UITableViewCellAccessoryNone;
-        cell.userInteractionEnabled = false;
     }
     
     return cell;
@@ -128,6 +131,14 @@
         categoryVC.title = [[_categories objectAtIndex:indexPath.row] Name];
         
         [self.navigationController pushViewController:categoryVC animated:YES];
+    } else {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"SearchView" bundle:nil];
+        SearchViewController *searchVC = [storyboard instantiateInitialViewController];
+        
+        searchVC.title = [[_categories objectAtIndex:indexPath.row] Name];
+        searchVC.searchValue = [[_categories objectAtIndex:indexPath.row] Name];
+        
+        [self.navigationController pushViewController:searchVC animated:YES];
     }
     
     [_resultListView deselectRowAtIndexPath:indexPath animated:YES];

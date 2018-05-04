@@ -43,7 +43,9 @@ static NSString *kAuthorizationValue = @"OAuth oauth_consumer_key=\"A1AC63F0332A
         _sessionManager.requestSerializer = [AFJSONRequestSerializer serializer];
         [_sessionManager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
         [_sessionManager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
-        //[_sessionManager.requestSerializer setValue:kAuthorizationValue forHTTPHeaderField:kAuthorizationKey];
+        [_sessionManager.requestSerializer setValue:@"OAuth oauth_consumer_key=\"A1AC63F0332A131A78FAC304D007E7D1\", oauth_signature_method=\"PLAINTEXT\", oauth_signature=\"EC7F18B17A062962C6930A8AE88B16C7&\"" forHTTPHeaderField:kAuthorizationKey];
+        
+//        [_sessionManager.requestSerializer setValue:kAuthorizationValue forHTTPHeaderField:kAuthorizationKey];
         
     }
     return self;

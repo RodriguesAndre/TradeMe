@@ -7,6 +7,7 @@ target 'trademe' do
 
   # Pods for trademe
   pod 'AFNetworking', '~> 3.0'
+  pod 'AFNetworkActivityLogger', git: 'https://github.com/AFNetworking/AFNetworkActivityLogger.git', branch: '3_0_0'
   pod 'JSONModel'
   pod 'SVProgressHUD'
 
