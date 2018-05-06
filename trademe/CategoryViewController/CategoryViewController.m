@@ -62,18 +62,15 @@
 - (void)getRootCategory {
     CategoryOperation *operation = [[CategoryOperation alloc] init];
     RequestBlock *block = [RequestBlock initWithStartBlock:^{
-        NSLog(@"start");
         [SVProgressHUD show];
     } andSuccessBlock:^(NSURLSessionDataTask * _Nullable dataTask, id _Nullable result) {
-        NSLog(@"andSuccessBlock");
+        NSLog(@"successBlock");
         _categories = ((CategoryModel *)result).Subcategories;
     } errorBlock:^(NSURLSessionDataTask * _Nullable dataTask, NSError * _Nonnull error) {
-        NSLog(@"errorBlock");
-        NSLog(@"eroor: %@", error);
+        NSLog(@"error: %@", error);
     } networkErrorBlock:^{
         NSLog(@"networkErrorBlock");
     } finishBlock:^{
-        NSLog(@"finishBlock");
         [_resultListView reloadData];
         [SVProgressHUD dismiss];
     }];

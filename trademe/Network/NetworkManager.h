@@ -13,6 +13,6 @@
 @interface NetworkManager : NSObject
 
 + (instancetype)sharedInstance;
-- (NSURLSessionDataTask *)requestOperation:(BaseOperation* _Nonnull)operation withBlock:(RequestBlock *)requestBlock;
+- (NSURLSessionDataTask *)requestOperation:(BaseOperation * _Nonnull)operation withBlock:(RequestBlock *)requestBlock;
 
 @end

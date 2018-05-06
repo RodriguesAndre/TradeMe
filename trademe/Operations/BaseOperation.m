@@ -41,8 +41,4 @@
     return nil;
 }
 
-//- (NSString *)modelClassName {
-//    return nil;
-//}
-
 @end

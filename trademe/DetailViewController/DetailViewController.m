@@ -53,7 +53,7 @@
     _carouselImgVw.bounceDistance = 0.2f;
 
 //    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
-    self.navigationController.navigationBar.topItem.title = @"Back";
+//    self.navigationController.navigationBar.topItem.title = @"Back";
 
 }
 
@@ -90,11 +90,11 @@
     
     _startPriceLabel.alpha = (item.StartPrice > 0);
     _startPriceValueLabel.alpha = (item.StartPrice > 0);
-    _startPriceLabel.text = [NSString stringWithFormat:@"%.2f", item.StartPrice];
+    _startPriceValueLabel.text = [NSString stringWithFormat:@"%.2f$", item.StartPrice];
     
     _buyNowPriceLabel.alpha = (item.BuyNowPrice > 0);
     _buyNowPriceValueLabel.alpha = (item.BuyNowPrice > 0);
-    _buyNowPriceLabel.text = [NSString stringWithFormat:@"%.2f", item.BuyNowPrice];
+    _buyNowPriceValueLabel.text = [NSString stringWithFormat:@"%.2f$", item.BuyNowPrice];
     
     [_carouselImgVw reloadData];
     
@@ -136,12 +136,13 @@
     if (view == nil) {
         itemView = [[UIImageView alloc] initWithFrame:carousel.frame];
         itemView.contentMode = UIViewContentModeScaleAspectFit;
+        itemView.backgroundColor = [UIColor clearColor];
     } else {
         itemView = (UIImageView *)view;
     }
     
     if ([_detailItem.Photos count] > 0) {
-        NSURL *photoUrl = [NSURL URLWithString:((PhotoModel *)[_detailItem.Photos objectAtIndex:index]).Medium];
+        NSURL *photoUrl = [NSURL URLWithString:((PhotoModel *)[_detailItem.Photos objectAtIndex:index]).Large];
         [itemView setImageWithURL:photoUrl placeholderImage:[UIImage imageFromColor:[UIColor lightGrayColor]]];
     }
     
@@ -153,7 +154,7 @@
     NSMutableArray *photos = [NSMutableArray new];
     
     for (PhotoModel *photoItem in _detailItem.Photos) {
-        NSURL *photoUrl = [NSURL URLWithString:photoItem.Gallery];
+        NSURL *photoUrl = [NSURL URLWithString:photoItem.Large];
         IDMPhoto *photo = [IDMPhoto photoWithURL:photoUrl];
         [photos addObject:photo];
     }

@@ -54,7 +54,7 @@ static NSString *kAuthorizationValue = @"OAuth oauth_consumer_key=\"A1AC63F0332A
     return [NSString stringWithFormat:@"%@%@%@%@", kBaseURL, [operation getEndpoint], ([operation urlComplement] ? [operation urlComplement] : @""), ([operation fileFormat] ? [operation fileFormat] : @"")];
 }
 
-- (NSURLSessionDataTask *)requestOperation:(BaseOperation* _Nonnull)operation withBlock:(RequestBlock *)requestBlock {
+- (NSURLSessionDataTask *)requestOperation:(BaseOperation * _Nonnull)operation withBlock:(RequestBlock *)requestBlock {
     
     NSURLSessionDataTask *dataTask;
     NSString *url = [self urlFromOperation:operation];

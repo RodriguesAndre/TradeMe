@@ -171,10 +171,10 @@
 				65A9514320970DE9006BA51A /* LaunchScreen.storyboard */,
 				65A9514620970DE9006BA51A /* Info.plist */,
 				65A9514720970DE9006BA51A /* main.m */,
-				E6CEF22C209F4F9900FD651A /* UIImage+Utils.h */,
-				E6CEF22D209F4F9900FD651A /* UIImage+Utils.m */,
-				65A9519B209CAE06006BA51A /* Model */,
 				65A95179209998F9006BA51A /* Network */,
+				E6CEF22F209FA75D00FD651A /* Utils */,
+				65A9519B209CAE06006BA51A /* Models */,
+				E6CEF230209FA77300FD651A /* Operations */,
 			);
 			path = trademe;
 			sourceTree = "<group>";
@@ -207,19 +207,11 @@
 				65A9516B20974A2C006BA51A /* NetworkManager.m */,
 				65A9517D2099D525006BA51A /* Provider.h */,
 				65A9517E2099D525006BA51A /* Provider.m */,
-				65A9516D209750A5006BA51A /* BaseOperation.h */,
-				65A9516E209750A5006BA51A /* BaseOperation.m */,
-				65A951702097513D006BA51A /* CategoryOperation.h */,
-				65A951712097513D006BA51A /* CategoryOperation.m */,
-				65A95190209C591D006BA51A /* SearchOperation.h */,
-				65A95191209C591D006BA51A /* SearchOperation.m */,
-				E6CEF229209E041600FD651A /* DetailItemOperation.h */,
-				E6CEF22A209E041600FD651A /* DetailItemOperation.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
 		};
-		65A9519B209CAE06006BA51A /* Model */ = {
+		65A9519B209CAE06006BA51A /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				65A9517A20999915006BA51A /* CategoryModel.h */,
@@ -229,7 +221,7 @@
 				65A95198209CAE00006BA51A /* DetailItemModel.h */,
 				65A95199209CAE00006BA51A /* DetailItemModel.m */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		65A9519C209CAE14006BA51A /* CategoryViewController */ = {
@@ -273,6 +265,30 @@
 				03805663F0A0E500EBAD5952 /* Pods-trademeUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		E6CEF22F209FA75D00FD651A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E6CEF22C209F4F9900FD651A /* UIImage+Utils.h */,
+				E6CEF22D209F4F9900FD651A /* UIImage+Utils.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		E6CEF230209FA77300FD651A /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				65A9516D209750A5006BA51A /* BaseOperation.h */,
+				65A9516E209750A5006BA51A /* BaseOperation.m */,
+				65A951702097513D006BA51A /* CategoryOperation.h */,
+				65A951712097513D006BA51A /* CategoryOperation.m */,
+				65A95190209C591D006BA51A /* SearchOperation.h */,
+				65A95191209C591D006BA51A /* SearchOperation.m */,
+				E6CEF229209E041600FD651A /* DetailItemOperation.h */,
+				E6CEF22A209E041600FD651A /* DetailItemOperation.m */,
+			);
+			path = Operations;
 			sourceTree = "<group>";
 		};
 		F68BBC0213620D9FD257B209 /* Frameworks */ = {

@@ -11,6 +11,7 @@
 
 
 @implementation PhotoModel
+
 + (JSONKeyMapper *)keyMapper
 {
     return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{

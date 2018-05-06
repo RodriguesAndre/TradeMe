@@ -17,7 +17,7 @@
 @implementation Provider
 
 
-+ (NSURLSessionDataTask *)requestOperation:(BaseOperation *_Nonnull)operation withBlock:(RequestBlock *)requestBlock {
++ (NSURLSessionDataTask *)requestOperation:(BaseOperation * _Nonnull)operation withBlock:(RequestBlock *)requestBlock {
  
     RequestBlock *providerBlock = [RequestBlock initWithStartBlock:^{
         [requestBlock onStart];

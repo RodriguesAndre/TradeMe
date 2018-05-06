@@ -12,6 +12,6 @@
 
 @interface Provider : NSObject
 
-+ (NSURLSessionDataTask *)requestOperation:(BaseOperation *_Nonnull)operation withBlock:(RequestBlock *)requestBlock;
++ (NSURLSessionDataTask *)requestOperation:(BaseOperation * _Nonnull)operation withBlock:(RequestBlock *)requestBlock;
     
 @end

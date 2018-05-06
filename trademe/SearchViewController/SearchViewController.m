@@ -41,18 +41,12 @@
     if ((_searchValue != nil) && (_searchValue.length > 0)) {
         _searchField.text = _searchValue;
         [self launchSearch];
+        self.title = @"Results";
     }
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-
-    if (_result) {
-         self.title = [NSString stringWithFormat:@"Results: %ld", (long)_result.TotalCount];
-    } else {
-        self.title = @"Results";
-    }
-
 }
 
 - (void)didReceiveMemoryWarning {
@@ -65,7 +59,6 @@
 }
 
 - (void)launchSearch {
-    
     SearchOperation *operation = [[SearchOperation alloc] init];
     
     if ([_searchField.text length] > 0) {
@@ -74,26 +67,21 @@
     }
         
     RequestBlock *block = [RequestBlock initWithStartBlock:^{
-            NSLog(@"start");
             [SVProgressHUD show];
         } andSuccessBlock:^(NSURLSessionDataTask * _Nullable dataTask, id _Nullable result) {
-            NSLog(@"andSuccessBlock");
+            NSLog(@"successBlock");
             _result = ((ResultModel *)result);
             self.title = [NSString stringWithFormat:@"Results: %ld", (long)_result.TotalCount];
         } errorBlock:^(NSURLSessionDataTask * _Nullable dataTask, NSError * _Nonnull error) {
-            NSLog(@"errorBlock");
-            NSLog(@"eroor: %@", error);
+            NSLog(@"error: %@", error);
         } networkErrorBlock:^{
             NSLog(@"networkErrorBlock");
         } finishBlock:^{
-            NSLog(@"finishBlock");
             [_resultListView reloadData];
             [SVProgressHUD dismiss];
         }];
-        
-        
-        [Provider requestOperation:operation withBlock:block];
     
+        [Provider requestOperation:operation withBlock:block];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -115,7 +103,7 @@
     
     cell.title.text = [[_result.List objectAtIndex:indexPath.row] Title];
     cell.region.text = [[_result.List objectAtIndex:indexPath.row] Region];
-    cell.price.text = [NSString stringWithFormat:@"%ld", (long)[[_result.List objectAtIndex:indexPath.row] BuyNowPrice]];
+    cell.price.text = [NSString stringWithFormat:@"%ld$", (long)[[_result.List objectAtIndex:indexPath.row] BuyNowPrice]];
     
     if ([[_result.List objectAtIndex:indexPath.row] PictureHref]) {
         NSURL *pictureUrl = [NSURL URLWithString:[[_result.List objectAtIndex:indexPath.row] PictureHref]];
@@ -134,13 +122,17 @@
   
     DetailViewController *detailVC = [DetailViewController new];
     NSString *detailIdString = [NSString stringWithFormat:@"%ld", (long)[[_result.List objectAtIndex:indexPath.row] ListingId]];
-    
     [detailVC loadDetailItemWithId:detailIdString];
     
     [self.navigationController pushViewController:detailVC animated:YES];
     
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithTitle:@"Back"
+                                                                 style:UIBarButtonItemStylePlain
+                                                                target:nil
+                                                                action:nil];
+    [self.navigationItem setBackBarButtonItem:backItem];
+    
     [_resultListView deselectRowAtIndexPath:indexPath animated:YES];
 }
-
 
 @end
