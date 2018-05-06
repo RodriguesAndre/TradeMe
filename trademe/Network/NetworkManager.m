@@ -23,7 +23,7 @@
 static NSString *kBaseURL = @"https://api.tmsandbox.co.nz/v1";
 
 static NSString *kAuthorizationKey = @"Authorization";
-static NSString *kAuthorizationValue = @"OAuth oauth_consumer_key=\"A1AC63F0332A131A78FAC304D007E7D1\",oauth_signature_method=\"HMAC-SHA1\",oauth_timestamp=\"1525266047\",oauth_nonce=\"FJQsJbldW57\",oauth_version=\"1.0\",oauth_signature=\"sdhmu%2FuyTLjuqHX1m%2BfJxZxXwqo%3D\"";
+static NSString *kAuthorizationValue = @"OAuth oauth_consumer_key=\"A1AC63F0332A131A78FAC304D007E7D1\", oauth_signature_method=\"PLAINTEXT\", oauth_signature=\"EC7F18B17A062962C6930A8AE88B16C7&\"";
 
 
 + (instancetype)sharedInstance {
@@ -43,17 +43,15 @@ static NSString *kAuthorizationValue = @"OAuth oauth_consumer_key=\"A1AC63F0332A
         _sessionManager.requestSerializer = [AFJSONRequestSerializer serializer];
         [_sessionManager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
         [_sessionManager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
-        [_sessionManager.requestSerializer setValue:@"OAuth oauth_consumer_key=\"A1AC63F0332A131A78FAC304D007E7D1\", oauth_signature_method=\"PLAINTEXT\", oauth_signature=\"EC7F18B17A062962C6930A8AE88B16C7&\"" forHTTPHeaderField:kAuthorizationKey];
-        
-//        [_sessionManager.requestSerializer setValue:kAuthorizationValue forHTTPHeaderField:kAuthorizationKey];
-        
+        [_sessionManager.requestSerializer setValue:kAuthorizationValue forHTTPHeaderField:kAuthorizationKey];
+                
     }
     return self;
 }
 
 
 - (NSString *)urlFromOperation:(BaseOperation *)operation {
-    return [NSString stringWithFormat:@"%@%@%@", kBaseURL, [operation getEndpoint], ([operation urlComplement] ? [operation urlComplement] : @"")];
+    return [NSString stringWithFormat:@"%@%@%@%@", kBaseURL, [operation getEndpoint], ([operation urlComplement] ? [operation urlComplement] : @""), ([operation fileFormat] ? [operation fileFormat] : @"")];
 }
 
 - (NSURLSessionDataTask *)requestOperation:(BaseOperation* _Nonnull)operation withBlock:(RequestBlock *)requestBlock {

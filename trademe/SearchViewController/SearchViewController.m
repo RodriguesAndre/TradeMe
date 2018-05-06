@@ -13,7 +13,9 @@
 #import "SVProgressHUD.h"
 #import "Provider.h"
 #import "UIImageView+AFNetworking.h"
+#import "DetailViewController.h"
 
+#import "UIImage+Utils.h"
 
 @implementation SearchResultCell
 
@@ -36,15 +38,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
     if ((_searchValue != nil) && (_searchValue.length > 0)) {
         _searchField.text = _searchValue;
         [self launchSearch];
     }
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
+    if (_result) {
+         self.title = [NSString stringWithFormat:@"Results: %ld", (long)_result.TotalCount];
+    } else {
+        self.title = @"Results";
+    }
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -71,6 +79,7 @@
         } andSuccessBlock:^(NSURLSessionDataTask * _Nullable dataTask, id _Nullable result) {
             NSLog(@"andSuccessBlock");
             _result = ((ResultModel *)result);
+            self.title = [NSString stringWithFormat:@"Results: %ld", (long)_result.TotalCount];
         } errorBlock:^(NSURLSessionDataTask * _Nullable dataTask, NSError * _Nonnull error) {
             NSLog(@"errorBlock");
             NSLog(@"eroor: %@", error);
@@ -110,7 +119,7 @@
     
     if ([[_result.List objectAtIndex:indexPath.row] PictureHref]) {
         NSURL *pictureUrl = [NSURL URLWithString:[[_result.List objectAtIndex:indexPath.row] PictureHref]];
-        [cell.picture setImageWithURL:pictureUrl];
+        [cell.picture setImageWithURL:pictureUrl placeholderImage:[UIImage imageFromColor:[UIColor lightGrayColor]]];
         cell.picture.backgroundColor = [UIColor clearColor];
     } else {
         cell.picture.image = nil;
@@ -122,15 +131,14 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+  
+    DetailViewController *detailVC = [DetailViewController new];
+    NSString *detailIdString = [NSString stringWithFormat:@"%ld", (long)[[_result.List objectAtIndex:indexPath.row] ListingId]];
     
-//    if ([[_categories objectAtIndex:indexPath.row] Subcategories] != nil && [[[_categories objectAtIndex:indexPath.row] Subcategories] count] > 0) {
-//        CategoryViewController *categoryVC = [self.storyboard instantiateViewControllerWithIdentifier:@"categoryStoryboardID"];
-//        categoryVC.categories = [[_categories objectAtIndex:indexPath.row] Subcategories];
-//        categoryVC.title = [[_categories objectAtIndex:indexPath.row] Name];
-//
-//        [self.navigationController pushViewController:categoryVC animated:YES];
-//    }
-//
+    [detailVC loadDetailItemWithId:detailIdString];
+    
+    [self.navigationController pushViewController:detailVC animated:YES];
+    
     [_resultListView deselectRowAtIndexPath:indexPath animated:YES];
 }
 

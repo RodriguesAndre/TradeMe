@@ -39,7 +39,7 @@
     } networkErrorBlock:^{
         [requestBlock onNetworkError];
         [requestBlock onFinish];
-    } finishBlock:nil];
+    } finishBlock:nil];//Todo: use promises to chain tasks
     
     return [[NetworkManager sharedInstance] requestOperation:operation withBlock:providerBlock];
 }

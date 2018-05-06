@@ -31,6 +31,8 @@
 		65A9519A209CAE00006BA51A /* DetailItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A95199209CAE00006BA51A /* DetailItemModel.m */; };
 		A768BCEC3CECBE93EE850CFB /* libPods-trademeUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97AA9EFBEB62241272E32BF1 /* libPods-trademeUITests.a */; };
 		C912EC77B9E2F877BEF382F2 /* libPods-trademe.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3A29452BD259802E2B8E14B /* libPods-trademe.a */; };
+		E6CEF22B209E041600FD651A /* DetailItemOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E6CEF22A209E041600FD651A /* DetailItemOperation.m */; };
+		E6CEF22E209F4F9900FD651A /* UIImage+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = E6CEF22D209F4F9900FD651A /* UIImage+Utils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +102,10 @@
 		97AA9EFBEB62241272E32BF1 /* libPods-trademeUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-trademeUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB8BC44F16B3EFCD9D2C2390 /* Pods-trademeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trademeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-trademeUITests/Pods-trademeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E3A29452BD259802E2B8E14B /* libPods-trademe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-trademe.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6CEF229209E041600FD651A /* DetailItemOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailItemOperation.h; sourceTree = "<group>"; };
+		E6CEF22A209E041600FD651A /* DetailItemOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailItemOperation.m; sourceTree = "<group>"; };
+		E6CEF22C209F4F9900FD651A /* UIImage+Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Utils.h"; sourceTree = "<group>"; };
+		E6CEF22D209F4F9900FD651A /* UIImage+Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Utils.m"; sourceTree = "<group>"; };
 		F8E3289F97A3AAB4F8205F9C /* Pods-trademeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trademeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-trademeTests/Pods-trademeTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -165,6 +171,8 @@
 				65A9514320970DE9006BA51A /* LaunchScreen.storyboard */,
 				65A9514620970DE9006BA51A /* Info.plist */,
 				65A9514720970DE9006BA51A /* main.m */,
+				E6CEF22C209F4F9900FD651A /* UIImage+Utils.h */,
+				E6CEF22D209F4F9900FD651A /* UIImage+Utils.m */,
 				65A9519B209CAE06006BA51A /* Model */,
 				65A95179209998F9006BA51A /* Network */,
 			);
@@ -197,14 +205,16 @@
 				65A9517420975E73006BA51A /* RequestBlock.m */,
 				65A9516A20974A2C006BA51A /* NetworkManager.h */,
 				65A9516B20974A2C006BA51A /* NetworkManager.m */,
+				65A9517D2099D525006BA51A /* Provider.h */,
+				65A9517E2099D525006BA51A /* Provider.m */,
 				65A9516D209750A5006BA51A /* BaseOperation.h */,
 				65A9516E209750A5006BA51A /* BaseOperation.m */,
 				65A951702097513D006BA51A /* CategoryOperation.h */,
 				65A951712097513D006BA51A /* CategoryOperation.m */,
 				65A95190209C591D006BA51A /* SearchOperation.h */,
 				65A95191209C591D006BA51A /* SearchOperation.m */,
-				65A9517D2099D525006BA51A /* Provider.h */,
-				65A9517E2099D525006BA51A /* Provider.m */,
+				E6CEF229209E041600FD651A /* DetailItemOperation.h */,
+				E6CEF22A209E041600FD651A /* DetailItemOperation.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -518,11 +528,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-trademe/Pods-trademe-resources.sh",
+				"${PODS_ROOT}/IDMPhotoBrowser/Classes/IDMPhotoBrowser.bundle",
+				"${PODS_ROOT}/IDMPhotoBrowser/Classes/IDMPBLocalizations.bundle",
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IDMPhotoBrowser.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IDMPBLocalizations.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -576,7 +590,9 @@
 				65A9517F2099D525006BA51A /* Provider.m in Sources */,
 				65A9516F209750A5006BA51A /* BaseOperation.m in Sources */,
 				65A9514820970DE9006BA51A /* main.m in Sources */,
+				E6CEF22E209F4F9900FD651A /* UIImage+Utils.m in Sources */,
 				65A9518A209B6386006BA51A /* ResultModel.m in Sources */,
+				E6CEF22B209E041600FD651A /* DetailItemOperation.m in Sources */,
 				65A95192209C591D006BA51A /* SearchOperation.m in Sources */,
 				65A9513A20970DE9006BA51A /* AppDelegate.m in Sources */,
 				65A95196209CAD7E006BA51A /* DetailViewController.m in Sources */,

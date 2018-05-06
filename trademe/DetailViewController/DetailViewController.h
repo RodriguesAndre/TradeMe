@@ -10,4 +10,6 @@
 
 @interface DetailViewController : UIViewController
 
+- (void)loadDetailItemWithId:(NSString *)detailID;
+
 @end

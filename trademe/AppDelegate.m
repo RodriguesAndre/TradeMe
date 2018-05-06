@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "AFNetworkActivityLogger.h"
+#import "SVProgressHUD.h"
+
 
 @interface AppDelegate ()
 
@@ -20,6 +22,9 @@
     // Override point for customization after application launch.
     [[AFNetworkActivityLogger sharedLogger] setLogLevel:AFLoggerLevelError];
     [[AFNetworkActivityLogger sharedLogger] startLogging];
+    
+    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeGradient];
+    [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
 
     return YES;
 }

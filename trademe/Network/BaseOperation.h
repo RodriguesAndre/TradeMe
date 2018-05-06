@@ -15,6 +15,7 @@ typedef enum { GET, POST, PUT, PATCH, DELETE } HttpVerb;
 @property (nonatomic, strong) NSMutableDictionary *parameters;
 @property (nonatomic, assign) HttpVerb httpVerb;
 @property (nonatomic, strong) NSString *urlComplement;
+@property (nonatomic, strong) NSString *fileFormat;
 @property (nonatomic, strong) id operationResult;
 @property (nonatomic, strong) NSString *modelClassName;
 

@@ -25,8 +25,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *searchButton;
 @property (weak, nonatomic) IBOutlet UITableView *resultListView;
 
-
-
 @property (strong, nonatomic) NSArray <CategoryModel *> *categories;
 
 @end

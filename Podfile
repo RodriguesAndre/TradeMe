@@ -10,6 +10,8 @@ target 'trademe' do
   pod 'AFNetworkActivityLogger', git: 'https://github.com/AFNetworking/AFNetworkActivityLogger.git', branch: '3_0_0'
   pod 'JSONModel'
   pod 'SVProgressHUD'
+  pod 'IDMPhotoBrowser'
+  pod 'iCarousel'
 
   target 'trademeTests' do
     inherit! :search_paths
