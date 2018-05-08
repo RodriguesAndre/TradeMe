@@ -14,6 +14,7 @@
 #import "Provider.h"
 #import "UIImageView+AFNetworking.h"
 #import "DetailViewController.h"
+#import "CategoryModel.h"
 
 #import "UIImage+Utils.h"
 
@@ -62,22 +63,25 @@
     SearchOperation *operation = [[SearchOperation alloc] init];
     
     if ([_searchField.text length] > 0) {
-        operation.parameters =
-        [NSMutableDictionary dictionaryWithDictionary:@{@"search_string": _searchField.text}];
+        operation.parameters = [NSMutableDictionary dictionaryWithDictionary:@{@"search_string": _searchField.text}];
+        if (_searchCategory != nil) {
+            [operation.parameters setObject:_searchCategory.Number forKey:@"category"];
+        }
     }
-        
+    
+    __weak typeof(self) weakSelf = self;
     RequestBlock *block = [RequestBlock initWithStartBlock:^{
             [SVProgressHUD show];
         } andSuccessBlock:^(NSURLSessionDataTask * _Nullable dataTask, id _Nullable result) {
             NSLog(@"successBlock");
-            _result = ((ResultModel *)result);
-            self.title = [NSString stringWithFormat:@"Results: %ld", (long)_result.TotalCount];
+            weakSelf.result = ((ResultModel *)result);
+            weakSelf.title = [NSString stringWithFormat:@"Results: %ld", (long)weakSelf.result.TotalCount];
         } errorBlock:^(NSURLSessionDataTask * _Nullable dataTask, NSError * _Nonnull error) {
             NSLog(@"error: %@", error);
         } networkErrorBlock:^{
             NSLog(@"networkErrorBlock");
         } finishBlock:^{
-            [_resultListView reloadData];
+            [weakSelf.resultListView reloadData];
             [SVProgressHUD dismiss];
         }];
     

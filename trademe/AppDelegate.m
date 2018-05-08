@@ -20,7 +20,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [[AFNetworkActivityLogger sharedLogger] setLogLevel:AFLoggerLevelError];
+    [[AFNetworkActivityLogger sharedLogger] setLogLevel:AFLoggerLevelDebug];
     [[AFNetworkActivityLogger sharedLogger] startLogging];
     
     [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeGradient];

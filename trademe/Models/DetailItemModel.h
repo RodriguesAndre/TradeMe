@@ -38,11 +38,11 @@
 @property (copy, nonatomic) NSString *Category;
 @property (assign, nonatomic) float StartPrice;
 @property (assign, nonatomic) float BuyNowPrice;
-@property (assign, nonatomic) NSString *StartDate;
+@property (copy, nonatomic) NSString *StartDate;
 @property (assign, nonatomic) NSInteger EndDate;
 @property (assign, nonatomic) bool IsFeatured;
 @property (assign, nonatomic) bool HasGallery;
-@property (assign, nonatomic) NSString *Region;
+@property (copy, nonatomic) NSString *Region;
 @property (strong, nonatomic) MemberModel *Member;
 @property (strong, nonatomic) NSArray <PhotoModel, Optional> *Photos;
 

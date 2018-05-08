@@ -24,7 +24,7 @@
     } andSuccessBlock:^(NSURLSessionDataTask * _Nullable dataTask, id _Nullable result) {
         
         NSError *error;
-        CategoryModel *object = [[NSClassFromString([operation modelClassName]) alloc] initWithDictionary:result error:&error];
+        id object = [[NSClassFromString([operation modelClassName]) alloc] initWithDictionary:result error:&error];
         
         if (error) {
             [requestBlock onError:error];

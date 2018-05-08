@@ -25,16 +25,16 @@
 @property (weak, nonatomic) IBOutlet UIButton *searchButton;
 @property (weak, nonatomic) IBOutlet UITableView *resultListView;
 
-@property (strong, nonatomic) NSArray <CategoryModel *> *categories;
+@property (strong, nonatomic) CategoryModel *currentCategory;
 
 @end
 
 @implementation CategoryViewController
 
-- (instancetype)initWithCategories:(NSArray <CategoryModel *> *)categories {
+- (instancetype)initWithCategories:(CategoryModel *)category {
     self = [super init];
     if (self) {
-        self.categories = categories;
+        self.currentCategory = category;
     }
     return self;
 }
@@ -43,9 +43,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    if (_categories == nil) {
+    if (_currentCategory == nil) {
         self.title = @"Trade me";// localizeStrings
-        _categories = @[];
         [self getRootCategory];
     } else {
         [_resultListView reloadData];
@@ -61,17 +60,19 @@
 
 - (void)getRootCategory {
     CategoryOperation *operation = [[CategoryOperation alloc] init];
+    
+    __weak typeof(self) weakSelf = self;
     RequestBlock *block = [RequestBlock initWithStartBlock:^{
         [SVProgressHUD show];
     } andSuccessBlock:^(NSURLSessionDataTask * _Nullable dataTask, id _Nullable result) {
         NSLog(@"successBlock");
-        _categories = ((CategoryModel *)result).Subcategories;
+        weakSelf.currentCategory = (CategoryModel *)result;
     } errorBlock:^(NSURLSessionDataTask * _Nullable dataTask, NSError * _Nonnull error) {
         NSLog(@"error: %@", error);
     } networkErrorBlock:^{
         NSLog(@"networkErrorBlock");
     } finishBlock:^{
-        [_resultListView reloadData];
+        [weakSelf.resultListView reloadData];
         [SVProgressHUD dismiss];
     }];
     
@@ -85,13 +86,14 @@
 
         searchVC.title = _searchField.text;
         searchVC.searchValue = _searchField.text;
+        searchVC.searchCategory = _currentCategory;
         
         [self.navigationController pushViewController:searchVC animated:YES];
     }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [_categories count];
+    return [_currentCategory.Subcategories count];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -107,9 +109,9 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:myIdentifier];
     }
     
-    cell.textLabel.text = [[_categories objectAtIndex:indexPath.row] Name];
+    cell.textLabel.text = [[_currentCategory.Subcategories objectAtIndex:indexPath.row] Name];
 
-    if ([[_categories objectAtIndex:indexPath.row] Subcategories] != nil && [[[_categories objectAtIndex:indexPath.row] Subcategories] count] > 0) {
+    if ([[_currentCategory.Subcategories objectAtIndex:indexPath.row] Subcategories] != nil && [[[_currentCategory.Subcategories objectAtIndex:indexPath.row] Subcategories] count] > 0) {
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     } else {
         cell.accessoryType = UITableViewCellAccessoryNone;
@@ -120,18 +122,19 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    if ([[_categories objectAtIndex:indexPath.row] Subcategories] != nil && [[[_categories objectAtIndex:indexPath.row] Subcategories] count] > 0) {
+    if ([[_currentCategory.Subcategories objectAtIndex:indexPath.row] Subcategories] != nil && [[[_currentCategory.Subcategories objectAtIndex:indexPath.row] Subcategories] count] > 0) {
         CategoryViewController *categoryVC = [self.storyboard instantiateViewControllerWithIdentifier:@"categoryStoryboardID"];
-        categoryVC.categories = [[_categories objectAtIndex:indexPath.row] Subcategories];
-        categoryVC.title = [[_categories objectAtIndex:indexPath.row] Name];
+        categoryVC.currentCategory = [_currentCategory.Subcategories objectAtIndex:indexPath.row];
+        categoryVC.title = [[_currentCategory.Subcategories objectAtIndex:indexPath.row] Name];
         
         [self.navigationController pushViewController:categoryVC animated:YES];
     } else {
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"SearchView" bundle:nil];
         SearchViewController *searchVC = [storyboard instantiateInitialViewController];
         
-        searchVC.title = [[_categories objectAtIndex:indexPath.row] Name];
-        searchVC.searchValue = [[_categories objectAtIndex:indexPath.row] Name];
+        searchVC.title = [[_currentCategory.Subcategories objectAtIndex:indexPath.row] Name];
+        searchVC.searchValue = [[_currentCategory.Subcategories objectAtIndex:indexPath.row] Name];
+        searchVC.searchCategory = _currentCategory;
         
         [self.navigationController pushViewController:searchVC animated:YES];
     }

@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+@class CategoryModel;
+
 @interface SearchResultCell : UITableViewCell
 
 @property (strong, nonatomic) IBOutlet UILabel *title;
@@ -21,6 +23,7 @@
 @interface SearchViewController : UIViewController
 
 @property (strong, nonatomic) NSString *searchValue;
+@property (strong, nonatomic) CategoryModel *searchCategory;
 
 
 @end
